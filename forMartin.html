@@ -1,0 +1,249 @@
+<style>
+    .col .text_center {
+        padding: 0;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .wow-404-btns a:hover {
+        color: unset;
+    }
+
+    .wow-404 {
+        background-color: #92bdce;
+        margin-top: 50px;
+    }
+
+    .wow-404 p {
+        font-size: 40px;
+        font-weight: 700;
+        margin-top: 41px;
+        margin-bottom: 0;
+        padding-top: 25px;
+    }
+
+    .wow-404 h1 {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .wow-404-btns div:nth-child(1) {
+        grid-area: myArea1;
+    }
+
+    .wow-404-btns div:nth-child(2) {
+        grid-area: myArea2;
+    }
+
+    .wow-404-btns div:nth-child(3) {
+        grid-area: myArea3;
+        width: 40%;
+    }
+
+    .wow-404-btns {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 15px;
+        grid-template-areas:
+            'myArea1 myArea2'
+            'myArea3 myArea3';
+    }
+
+    .wow-404-btns div {
+        width: 80%;
+        margin: auto;
+    }
+
+    .wow-404-btns a {
+        background-color: #D60057;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 11px;
+        padding: 10px 10px;
+        margin: auto;
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .error-404-container {
+        padding: 0;
+        background-color: white;
+    }
+
+    .wow-search {
+        width: 70%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .wow-search input {
+        width: 70%;
+        background-color: #92bdce;
+        border-right: 0;
+        border-radius: 0;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+
+    }
+
+    .wow-search input::placeholder {
+        color: white;
+        font-weight: 200;
+    }
+
+    .wow-search button {
+        font-weight: 800;
+        font-size: 13px;
+        width: max-content;
+        padding: 4px 4px;
+        background-color: white;
+        color: #D60057;
+        border: 0;
+        border-radius: 8px;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .error-404-mobile {
+        display: block;
+    }
+
+    .error-404-desktop {
+        display: none;
+    }
+
+    @media screen and (min-width: 600px) {
+        .wow-404-btns div:nth-child(3) {
+            width: 30%;
+        }
+
+        .wow-404-btns div {
+            width: 60%;
+        }
+
+        .wow-search input {
+            width: 50%;
+        }
+
+        .wow-404-btns {
+            width: 80%;
+            margin: auto;
+        }
+    }
+
+    @media screen and (min-width: 786px) {
+        .error-404-mobile {
+            display: none;
+        }
+
+        .error-404-desktop {
+            display: block;
+        }
+
+        .wow-404 {
+            position: relative;
+        }
+
+        .wow-404-div {
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 70%;
+        }
+
+        .wow-404-btns {
+            display: block;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: unset;
+            row-gap: 0;
+            column-gap: 5px;
+
+        }
+
+        .wow-404-btns div:nth-child(1),
+        .wow-404-btns div:nth-child(2),
+        .wow-404-btns div:nth-child(3) {
+            grid-area: unset;
+            width: unset;
+            min-width: 100%;
+        }
+
+        .wow-404 p {
+            font-size: 40px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (min-width: 994px) {
+
+        .wow-404-btns div:nth-child(1),
+        .wow-404-btns div:nth-child(2),
+        .wow-404-btns div:nth-child(3) {
+            grid-area: unset;
+            width: unset;
+            min-width: 80%;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .wow-404-div {
+            min-height: 70%;
+        }
+    }
+
+    @media screen and (min-width: 1600px) {
+        .wow-search {
+            width: 55%;
+        }
+
+        .wow-404-div {
+            min-height: 60%;
+        }
+    }
+
+    @media screen and (min-width: 1800px) {}
+</style>
+
+<main id="site-content" role="main">
+    <div class="error-404-container">
+        <div class="wow-404">
+            <div class="wow-404-div">
+                <p>Ооопс...</p>
+                <h1>Страницата, която търсите, не съществува.</h1>
+                <div class="wow-404-btns">
+                    <div>
+                        <a href="">Начална страница</a>
+                    </div>
+                    <div>
+                        <a href="">Категории</a>
+                    </div>
+                    <div>
+                        <a href="">Контакти</a>
+                    </div>
+                </div>
+                <div class="wow-search">
+                    <input type="text" placeholder="Търсене в сайта..." />
+                    <button>Търсене</button>
+                </div>
+            </div>
+            <img class="error-404-mobile" src="./Error-page-m.webp" alt="">
+            <img class="error-404-desktop" src="./Error-page-D.webp" alt="">
+        </div>
+    </div>
+</main>
